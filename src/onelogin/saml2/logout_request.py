@@ -80,11 +80,11 @@ class OneLogin_Saml2_Logout_Request(object):
                     nameIdFormat = name_id_format
                 else:
                     nameIdFormat = sp_data['NameIDFormat']
-                spNameQualifier = None
             else:
                 name_id = idp_data['entityId']
                 nameIdFormat = OneLogin_Saml2_Constants.NAMEID_ENTITY
-                spNameQualifier = sp_data['entityId']
+
+            spNameQualifier = sp_data['entityId']
 
             name_id_obj = OneLogin_Saml2_Utils.generate_name_id(
                 name_id,
